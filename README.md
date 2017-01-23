@@ -14,7 +14,6 @@
 ```
 -->
 ```html
-<script src="../twitter-share-button.js"></script>
 
 <!-- Element projection -->
 <twitter-share-button>Twitter Button</twitter-share-button>
