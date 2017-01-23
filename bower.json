@@ -1,4 +1,7 @@
 {
   "name": "twitter-share-button",
-  "licence": "Apache2"
+  "license": "Apache-2.0",
+  "authors": [
+    "Paul Kinlan <paul.kinlan@gmail.com>"
+  ]
 }
