@@ -4,6 +4,12 @@
   "authors": [
     "Paul Kinlan <paul.kinlan@gmail.com>"
   ],
+  "keywords": [
+    "share",
+    "web-components",
+    "custom-element",
+    "vanilla-js"
+  ],
   "main": [
     "twitter-share-button.js"
   ]

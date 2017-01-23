@@ -6,7 +6,7 @@
 ```
 <custom-element-demo>
   <template>
-    <script src="twitter-share-button.js"></script>
+    <link rel="import" href="twitter-share-button.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>

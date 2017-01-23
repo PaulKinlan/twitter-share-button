@@ -1,0 +1,19 @@
+{
+  "name": "twitter-share-button",
+  "main": "twitter-share-button.js",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulkinlan/twitter-share-button.git"
+  },
+  "author": "Paul Kinlan <paul.kinlan@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/paulkinlan/twitter-share-button/issues"
+  },
+  "homepage": "https://github.com/paulkinlan/twitter-share-button#readme",
+  "files": [
+    "twitter-share-button.js",
+    "twitter-share-button.html"
+  ]
+}
