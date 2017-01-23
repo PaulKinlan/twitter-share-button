@@ -6,8 +6,7 @@
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="my-element.html">
-    <link rel="import" href="../other-element/other-element.html">
+    <script src="twitter-share-button.js"></script>
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
