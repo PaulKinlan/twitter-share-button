@@ -14,7 +14,6 @@
 ```
 -->
 ```html
-<title>This is a test</title>
 <script src="../twitter-share-button.js"></script>
 
 <!-- Element projection -->
