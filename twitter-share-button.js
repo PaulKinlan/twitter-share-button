@@ -53,8 +53,8 @@ class TwitterShareButton extends QuickShareButton {
     root.querySelector('#share-btn').addEventListener('click', e => {
       let parentData = this.parentElement.shareData;
     
-      let textValue = (parentData.text) ? parentData.text : (this.text || document.title);
-      let urlValue = (parentData.url) ? parentData.url : this.href;
+      let textValue = (parentData && parentData.text) ? parentData.text : (this.text || document.title);
+      let urlValue = (parentData && parentData.url) ? parentData.url : this.href;
       location.href = `https://twitter.com/intent/tweet/?text=${encodeURIComponent(textValue)}&url=${encodeURIComponent(urlValue)}`;
     });
   }
