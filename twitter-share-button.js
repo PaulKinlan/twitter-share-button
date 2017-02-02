@@ -13,8 +13,7 @@
    limitations under the License.
 */
 
-class QuickShareButton extends HTMLElement {
-  constructor() { super(); }
+class TwitterShareButton extends HTMLElement {
 
   get text() {
     return this.getAttribute('text');
@@ -40,10 +39,6 @@ class QuickShareButton extends HTMLElement {
     }
   }
 
-}
-
-class TwitterShareButton extends QuickShareButton {
-
   get template() {
     if(this._template) return this._template;
     else {
@@ -59,9 +54,7 @@ class TwitterShareButton extends QuickShareButton {
     }
   }
 
-  constructor() {
-    super();
-    
+  connectedCallback() {
     const root = this.attachShadow({mode:'open'});
     root.appendChild(this.template.content.cloneNode(true));
 
@@ -72,6 +65,10 @@ class TwitterShareButton extends QuickShareButton {
       let urlValue = (parentData && parentData.url) ? parentData.url : this.href;
       location.href = `https://twitter.com/intent/tweet/?text=${encodeURIComponent(textValue)}&url=${encodeURIComponent(urlValue)}`;
     });
+  }
+
+  constructor() {
+    super();
   }
 }
 
