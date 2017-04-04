@@ -15,6 +15,8 @@
 
 class TwitterShareButton extends HTMLElement {
 
+  static get observedAttributes() { return ['href', 'text']; }
+
   get text() {
     return this.getAttribute('text');
   }
@@ -54,21 +56,27 @@ class TwitterShareButton extends HTMLElement {
     }
   }
 
-  connectedCallback() {
-    const root = this.attachShadow({mode:'open'});
-    root.appendChild(this.template.content.cloneNode(true));
-
-    root.querySelector('#share-btn').addEventListener('click', e => {
-      let parentData = this.parentElement.shareData;
-    
-      let textValue = (parentData && parentData.text) ? parentData.text : (this.text || document.title);
-      let urlValue = (parentData && parentData.url) ? parentData.url : this.href;
-      location.href = `https://twitter.com/intent/tweet/?text=${encodeURIComponent(textValue)}&url=${encodeURIComponent(urlValue)}`;
-    });
+  attributeChangedCallback(attr, oldValue, newValue) {
+    // Only the watched attributes will get changed.
+    if (oldValue != newValue) {
+      this[attr] = newValue;
+    }
   }
 
   constructor() {
     super();
+
+    const root = this.attachShadow({mode:'open'});
+    root.appendChild(this.template.content.cloneNode(true));
+
+    root.querySelector('#share-btn').addEventListener('click', e => {
+      let parentHref = this.parentElement.href;
+      let parentText = this.parentElement.text;
+    
+      let textValue = parentText || this.text || document.title;
+      let urlValue = parentHref || this.href || document.location;
+      location.href = `https://twitter.com/intent/tweet/?text=${encodeURIComponent(textValue)}&url=${encodeURIComponent(urlValue)}`;
+    });
   }
 }
 
