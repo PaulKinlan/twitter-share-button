@@ -1,7 +1,7 @@
 {
   "name": "twitter-share-button",
   "main": "twitter-share-button.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/paulkinlan/twitter-share-button.git"

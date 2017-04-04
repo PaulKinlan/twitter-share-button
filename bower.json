@@ -12,5 +12,6 @@
   ],
   "main": [
     "twitter-share-button.js"
-  ]
+  ],
+  "version": "0.1.0"
 }
