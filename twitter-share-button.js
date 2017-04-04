@@ -46,9 +46,14 @@ class TwitterShareButton extends HTMLElement {
     else {
       this._template = document.createElement('template');
       let styles = document.createElement('style');
-      styles.innerHTML = `:host {}`;
+      styles.innerHTML = `:host {}
+      #share-btn {
+        min-height: 32px;
+        min-width: 32px;
+      }
+      `;
       let body = document.createElement('div');
-      body.innerHTML = `<button id="share-btn"><slot></slot></button>`;
+      body.innerHTML = `<button id="share-btn"><slot><svg xmlns="http://www.w3.org/2000/svg" viewBox="75 75 240 240"><defs><style>.cls-2{fill:#1da1f2;}</style></defs><path d="M153.6 301.6c94.4 0 146-78.2 146-146 0-2.2 0-4.4-.2-6.6a104.4 104.4 0 0 0 25.6-26.5 102.4 102.4 0 0 1-29.5 8 51.5 51.5 0 0 0 22.6-28.3 102.8 102.8 0 0 1-32.5 12.4 51.3 51.3 0 0 0-87.4 46.8 145.6 145.6 0 0 1-105.6-53.6 51.3 51.3 0 0 0 16 68.5A51 51 0 0 1 85 170v.5a51.3 51.3 0 0 0 41 50.3 51.2 51.2 0 0 1-23 1 51.4 51.4 0 0 0 48 35.5 103 103 0 0 1-63.8 22 104.4 104.4 0 0 1-12.2-.8 145.2 145.2 0 0 0 78.6 23" class="cls-2"/></svg></slot></button>`;
       this._template.content.appendChild(styles);
       this._template.content.appendChild(body);
       
