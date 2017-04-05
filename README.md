@@ -1,5 +1,14 @@
 # Twitter Share Button
 
+The Twitter Share Button web component provides a simple and customizable
+interface for sharing URLs directly to Twitter.
+
+* Automatically uses the URL, title and description of the page when present
+* Allows you to override the URL and text to share to Twitter.
+* Allows you to configure the display with your own text and icons.
+* When combined with `<share-button>` element, it will automatically bind to the
+  data from it's host component and be embedded in the share control.
+
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/my-element)
 
 <!--
