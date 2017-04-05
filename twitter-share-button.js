@@ -44,7 +44,7 @@ class TwitterShareButton extends HTMLElement {
   createTemplate() {
     const framgent = document.createDocumentFragment();
     let styles = document.createElement('style');
-    styles.innerHTML = `:host {}
+    styles.innerHTML = `
     #share-btn {
       min-height: 32px;
       min-width: 32px;
